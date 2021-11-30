@@ -1,14 +1,14 @@
 import React from 'react'
 import './Animal.css'
 
-export default function Animal(props) {
-  // const animalClass = `${props.name} THE ${props.type} ${props.says} ${props.top} ${props.left}`
+export default function Animal({ name, says, top, left, type }) {
+  // const animalClass = `${name} THE ${props.type} ${props.says} ${props.top} ${props.left}`
 
   return (
-    <div className="animal" style={{ top: props.top, left: props.left }}>
-      <img alt={props.name} src={`${process.env.PUBLIC_URL}/animals/${props.type}.svg`} />
-      <span className="name">{props.name}</span>
-      {props.name} {props.says}
+    <div className="animal" style={{ top: top, left: left }}>
+      <img alt={name} src={`${process.env.PUBLIC_URL}/animals/${type}.svg`} />
+      <span className="name">{name}</span>
+      {name} {says}
     </div>
   )
 }
